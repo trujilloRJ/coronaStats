@@ -13,6 +13,7 @@ export class CountryChartComponent implements OnInit, OnChanges {
 
   barChartOptions: ChartOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       yAxes: [
         {
