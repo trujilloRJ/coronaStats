@@ -17,9 +17,15 @@
     <div class="number__info__title">
       Deaths
     </div>
-    <div [countUp]="country.deaths" class="number__info__value death">
-      {{ country.deaths }}
+    <div>
+      <span [countUp]="country.deaths" class="number__info__value death">
+        {{ country.deaths }}
+      </span>
+      <span class="number__info__percentage death"
+        >({{ percentages.deaths }} %)</span
+      >
     </div>
+
     <div class="number__yesterday death">
       +<span [countUp]="country.newDeaths">{{ country.newDeaths }}</span>
       Yesterday
@@ -30,9 +36,15 @@
     <div class="number__info__title">
       Recovered
     </div>
-    <div [countUp]="country.recovered" class="number__info__value recovered">
-      {{ country.recovered }}
+    <div>
+      <span [countUp]="country.recovered" class="number__info__value recovered">
+        {{ country.recovered }}
+      </span>
+      <span class="number__info__percentage recovered"
+        >({{ percentages.recovered }} %)</span
+      >
     </div>
+
     <div class="number__yesterday recovered">
       +<span [countUp]="country.newRecovered">{{ country.newRecovered }}</span>
       Yesterday
