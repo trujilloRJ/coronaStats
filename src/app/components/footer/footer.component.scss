@@ -1,0 +1,15 @@
+@import "../../config.scss";
+
+.footer {
+  background: $primary;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

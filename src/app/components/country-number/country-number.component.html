@@ -1,0 +1,41 @@
+<div class="number__card">
+  <div class="number__title">{{ country.country }} Today</div>
+  <div class="number__info">
+    <div class="number__info__title">
+      Active Cases
+    </div>
+    <div [countUp]="country.activeCases" class="number__info__value cases">
+      {{ country.activeCases }}
+    </div>
+    <div class="number__yesterday cases">
+      +<span [countUp]="country.newCases">{{ country.newCases }}</span>
+      Yesterday
+    </div>
+  </div>
+
+  <div class="number__info">
+    <div class="number__info__title">
+      Deaths
+    </div>
+    <div [countUp]="country.deaths" class="number__info__value death">
+      {{ country.deaths }}
+    </div>
+    <div class="number__yesterday death">
+      +<span [countUp]="country.newDeaths">{{ country.newDeaths }}</span>
+      Yesterday
+    </div>
+  </div>
+
+  <div class="number__info">
+    <div class="number__info__title">
+      Recovered
+    </div>
+    <div [countUp]="country.recovered" class="number__info__value recovered">
+      {{ country.recovered }}
+    </div>
+    <div class="number__yesterday recovered">
+      +<span [countUp]="country.newRecovered">{{ country.newRecovered }}</span>
+      Yesterday
+    </div>
+  </div>
+</div>

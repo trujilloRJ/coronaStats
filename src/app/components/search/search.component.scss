@@ -1,0 +1,48 @@
+@import "../../config.scss";
+
+.input {
+  &__wrapper {
+    margin: 0 1rem;
+    display: flex;
+  }
+  &__icon {
+    background: $cases;
+    padding: 0 0.5rem;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search {
+  &__input {
+    padding: 0.3rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    border: none;
+  }
+  &__list {
+    margin: 0 1rem;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.3rem 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(#333, 0.4);
+  }
+  &__item {
+    padding: 0 0.3rem 0.1rem 0.3rem;
+    cursor: pointer;
+    color: $cases;
+    &:hover {
+      font-size: 1.1rem;
+    }
+  }
+}

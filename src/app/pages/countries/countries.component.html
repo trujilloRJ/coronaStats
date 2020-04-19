@@ -1,0 +1,75 @@
+<div class="table__title animated fadeIn">
+  Summary of Countries
+</div>
+<div class="table__wrapper">
+  <table class="table animated fadeIn">
+    <tr class="table__header">
+      <th class="table__header__item primary">Country</th>
+      <th
+        class="table__header__item"
+        (click)="sort('confirmed')"
+        [ngClass]="active == 'confirmed' ? 'active' : ''"
+      >
+        Confirmed
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('deaths')"
+        [ngClass]="active == 'deaths' ? 'active' : ''"
+      >
+        Deaths
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('recovered')"
+        [ngClass]="active == 'recovered' ? 'active' : ''"
+      >
+        Recovered
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('activeCases')"
+        [ngClass]="active == 'activeCases' ? 'active' : ''"
+      >
+        Active Cases
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('newCases')"
+        [ngClass]="active == 'newCases' ? 'active' : ''"
+      >
+        New Cases
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('newDeaths')"
+        [ngClass]="active == 'newDeaths' ? 'active' : ''"
+      >
+        New Deaths
+      </th>
+      <th
+        class="table__header__item"
+        (click)="sort('newRecovered')"
+        [ngClass]="active == 'newRecovered' ? 'active' : ''"
+      >
+        New Recovered
+      </th>
+    </tr>
+    <tr class="table__row" *ngFor="let country of presentValues">
+      <td class="table__country" (click)="verCountry(country.country)">
+        <i class="fa fa-link fa-1x"></i> {{ country.country }}
+      </td>
+      <td>{{ country.confirmed | number: "." }}</td>
+      <td>{{ country.deaths | number: "." }}</td>
+      <td>{{ country.recovered | number: "." }}</td>
+      <td>
+        {{ country.activeCases | number: "." }}
+      </td>
+      <td class="table__newCases">{{ country.newCases | number: "." }}</td>
+      <td class="table__newDeaths">{{ country.newDeaths | number: "." }}</td>
+      <td class="table__newRecovered">
+        {{ country.newRecovered | number: "." }}
+      </td>
+    </tr>
+  </table>
+</div>

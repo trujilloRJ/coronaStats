@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/config.scss";
+@import "~animate.css/animate.min";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+  width: 100%;
+  background: $bg-all;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// utility
+.container {
+  width: 95%;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.grid {
+  display: grid;
+  &.g2 {
+    grid-template-columns: 0.3fr 0.7fr;
+  }
+  &.g3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.gap1 {
+  gap: 1rem;
+}
+
+.primary {
+  color: $primary;
+}
+
+.death {
+  color: $death;
+}
+
+.cases {
+  color: $cases;
+}
+
+.recovered {
+  color: $recovered;
+}
+
+.p1t {
+  padding: 1rem 0;
+}
+
+//***************************
+
+.total {
+  &__wrapper {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(#333, 0.3);
+    margin: 1rem 0;
+  }
+}
+
+.chart {
+  &__wrapper {
+    padding: 1rem;
+    width: 100%;
+  }
+  &__title {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.top {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 0;
+  &__wrapper {
+    width: 100%;
+  }
+  &__title {
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: $mob-width) {
+  .grid {
+    &.g2 {
+      grid-template-columns: 1fr;
+    }
+    &.g3 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

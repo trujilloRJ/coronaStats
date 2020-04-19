@@ -1,0 +1,25 @@
+$primary: cornflowerblue;
+$unfocus: #b0b0b0;
+$death: crimson;
+$recovered: #32cd32;
+$cases: coral;
+$bg-all: #efefef;
+$light-primary: lighten(
+  $color: $primary,
+  $amount: 31,
+);
+$light-cases: lighten(
+  $color: $cases,
+  $amount: 30,
+);
+$light-death: lighten(
+  $color: $death,
+  $amount: 40,
+);
+$light-recovered: lighten(
+  $color: $recovered,
+  $amount: 40,
+);
+$dark-primary: darken($primary, 14);
+$max-width: 1000px;
+$mob-width: 700px;

@@ -1,0 +1,38 @@
+<table class="table">
+  <tr class="table__header">
+    <th class="table__header__item primary">Country</th>
+    <ng-container *ngIf="feature === 'cases'">
+      <th class="table__header__item cases">New Cases</th>
+      <th class="table__header__item" [ngClass]="feature">Confirmed</th>
+    </ng-container>
+    <ng-container *ngIf="feature === 'death'">
+      <th class="table__header__item death">New Deaths</th>
+      <th class="table__header__item" [ngClass]="feature">Deaths</th>
+    </ng-container>
+    <ng-container *ngIf="feature === 'recovered'">
+      <th class="table__header__item recovered">New Recovered</th>
+      <th class="table__header__item" [ngClass]="feature">Recovered</th>
+    </ng-container>
+  </tr>
+  <ng-container *ngIf="feature == 'cases'">
+    <tr class="table__row" *ngFor="let country of topCountries">
+      <td>{{ country.country }}</td>
+      <td>{{ country.newCases | number: "." }}</td>
+      <td>{{ country.confirmed | number: "." }}</td>
+    </tr>
+  </ng-container>
+  <ng-container *ngIf="feature == 'death'">
+    <tr class="table__row" *ngFor="let country of topCountries">
+      <td>{{ country.country }}</td>
+      <td>{{ country.newDeaths | number: "." }}</td>
+      <td>{{ country.deaths | number: "." }}</td>
+    </tr>
+  </ng-container>
+  <ng-container *ngIf="feature == 'recovered'">
+    <tr class="table__row" *ngFor="let country of topCountries">
+      <td>{{ country.country }}</td>
+      <td>{{ country.newRecovered | number: "." }}</td>
+      <td>{{ country.recovered | number: "." }}</td>
+    </tr>
+  </ng-container>
+</table>

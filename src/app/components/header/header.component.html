@@ -1,0 +1,37 @@
+<header class="header">
+  <h1 class="header__brand"><a routerLink="/home">CoronaStats</a></h1>
+  <div class="header__search">
+    <app-search></app-search>
+  </div>
+  <ul class="header__nav">
+    <li>
+      <div class="header__cta" (click)="verCountry()">My Country</div>
+    </li>
+    <li class="header__nav__link">
+      <a routerLink="/home" routerLinkActive="link-active">world</a>
+    </li>
+    <li class="header__nav__link">
+      <a routerLink="/countries" routerLinkActive="link-active">countries</a>
+    </li>
+  </ul>
+  <div class="burguer" [ngClass]="mob ? 'showed' : ''" (click)="showMob()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</header>
+
+<div class="mob__search">
+  <app-search></app-search>
+</div>
+
+<div class="mob" [ngClass]="mob ? 'showed' : ''">
+  <ul class="mob__nav">
+    <li (click)="showMob()">
+      <a routerLink="/home" routerLinkActive="link-active">world</a>
+    </li>
+    <li (click)="showMob()">
+      <a routerLink="/countries" routerLinkActive="link-active">countries</a>
+    </li>
+  </ul>
+</div>

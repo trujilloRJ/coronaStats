@@ -1,0 +1,9 @@
+<div class="total__wrapper grid g2 animated fadeIn">
+  <div class="card__wrapper">
+    <app-country-number [country]="countryToday"></app-country-number>
+  </div>
+  <div class="chart__wrapper">
+    <div class="chart__title">{{ countryToday.country }} Historic Cases</div>
+    <app-country-chart [countryAll]="countryAll"></app-country-chart>
+  </div>
+</div>

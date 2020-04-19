@@ -1,0 +1,137 @@
+@import "../../config.scss";
+
+.header {
+  display: flex;
+  padding: 0.3rem 0.5rem;
+  width: 100%;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
+  &__brand {
+    a {
+      color: $primary;
+    }
+  }
+  &__search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    a {
+      color: #333;
+      margin-left: 1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.3rem 0;
+    }
+  }
+  &__cta {
+    cursor: pointer;
+    background: $primary;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(#333, 0.2);
+  }
+}
+
+.burguer {
+  display: none;
+  cursor: pointer;
+  padding: 0 0 0 1rem;
+  div {
+    width: 25px;
+    height: 4px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 4px;
+    transition: all 300ms ease-out;
+  }
+  &.showed {
+    .line2 {
+      opacity: 0;
+    }
+    .line1 {
+      transform: translateY(8px) rotate(405deg);
+    }
+    .line3 {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+.mob {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background: $bg-all;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+
+  &__search {
+    display: none;
+    width: 100%;
+  }
+
+  &__nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li {
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      a {
+        color: #333;
+      }
+    }
+  }
+
+  &.showed {
+    transform: translateX(0%);
+  }
+}
+
+.link-active {
+  border-bottom: 2px solid $cases;
+}
+
+@media (max-width: $mob-width) {
+  .burguer {
+    display: block;
+  }
+  .mob {
+    &__search {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .header {
+    &__search {
+      display: none;
+    }
+    &__nav {
+      &__link {
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+}

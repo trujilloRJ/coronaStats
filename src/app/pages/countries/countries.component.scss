@@ -1,0 +1,68 @@
+@import "../../config.scss";
+
+.table {
+  width: 100%;
+  color: #333;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  position: relative;
+  font-weight: 600;
+  th {
+    position: sticky;
+    top: 0;
+  }
+  &__title {
+    color: $primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  &__header {
+    &__item {
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+      box-shadow: 1px 1px 2px rgba(#333, 0.5);
+      background: $light-primary;
+    }
+  }
+  &__row {
+    text-align: center;
+    td {
+      padding: 0.4rem 0.4rem;
+      border: 1px solid rgba(#333, 0.3);
+    }
+  }
+  &__country {
+    cursor: pointer;
+    &:hover {
+      font-size: 1.1rem;
+      box-shadow: 1px 1px 2px rgba(#333, 0.2);
+    }
+    i {
+      font-size: 0.7rem;
+    }
+  }
+  &__newCases {
+    background: $light-cases;
+  }
+  &__newDeaths {
+    background: $light-death;
+  }
+  &__newRecovered {
+    background: $light-recovered;
+  }
+}
+
+.active {
+  background: $cases;
+  color: #fff;
+}
+
+@media (max-width: $mob-width) {
+  .table__wrapper {
+    overflow-x: auto;
+  }
+}
