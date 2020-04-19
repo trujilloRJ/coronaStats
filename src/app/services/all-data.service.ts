@@ -21,7 +21,8 @@ export class AllDataService {
   constructor() {}
 
   getCountries() {
-    return Object.keys(this.all_data);
+    var arr = Object.keys(this.all_data);
+    return arr.slice(0, -3);
   }
   getWorld() {
     return this.world_data;
