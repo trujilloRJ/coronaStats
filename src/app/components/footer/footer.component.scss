@@ -12,16 +12,18 @@
   color: #fff;
   &__name {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
   }
   &__source {
+    
+    text-align: center;
     div {
       display: inline-block;
       background: #fff;
       padding: 0.3rem 0.5rem;
-      border-radius: 10px;
+      border-radius: 4px;
       box-shadow: 1px 1px 5px rgba(#fff, 0.4);
-      font-weight: 700;
+      font-weight: 400;
       a {
         color: $cases;
       }

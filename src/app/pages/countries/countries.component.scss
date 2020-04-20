@@ -8,15 +8,14 @@
   margin-bottom: 2rem;
   border-collapse: collapse;
   position: relative;
-  font-weight: 600;
   th {
     position: sticky;
     top: 0;
   }
   &__title {
     color: $primary;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 400;
     text-align: center;
     padding: 1rem 0;
   }

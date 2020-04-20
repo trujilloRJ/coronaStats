@@ -7,10 +7,15 @@
   &__header {
     background: $light-primary;
     &__item {
+      font-weight: 400;
       padding: 0.3rem 0;
     }
   }
   &__row {
     text-align: center;
+    .number {
+      text-align: right;
+      padding-right: 1rem;
+    }
   }
 }

@@ -17,22 +17,22 @@
   <ng-container *ngIf="feature == 'cases'">
     <tr class="table__row" *ngFor="let country of topCountries">
       <td>{{ country.country }}</td>
-      <td>{{ country.newCases | number: "." }}</td>
-      <td>{{ country.confirmed | number: "." }}</td>
+      <td class="number">{{ country.newCases | number: "." }}</td>
+      <td class="number">{{ country.confirmed | number: "." }}</td>
     </tr>
   </ng-container>
   <ng-container *ngIf="feature == 'death'">
     <tr class="table__row" *ngFor="let country of topCountries">
       <td>{{ country.country }}</td>
-      <td>{{ country.newDeaths | number: "." }}</td>
-      <td>{{ country.deaths | number: "." }}</td>
+      <td class="number">{{ country.newDeaths | number: "." }}</td>
+      <td class="number">{{ country.deaths | number: "." }}</td>
     </tr>
   </ng-container>
   <ng-container *ngIf="feature == 'recovered'">
     <tr class="table__row" *ngFor="let country of topCountries">
       <td>{{ country.country }}</td>
-      <td>{{ country.newRecovered | number: "." }}</td>
-      <td>{{ country.recovered | number: "." }}</td>
+      <td class="number">{{ country.newRecovered | number: "." }}</td>
+      <td class="number">{{ country.recovered | number: "." }}</td>
     </tr>
   </ng-container>
 </table>
