@@ -2,10 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>CoronaStats</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta
+      name="description"
+      content="Coronavirus (COVID-19) dashboard that provides up to date information and analysis of the virus outbreak in every country."
+    />
+    <title>Corona Stats | Coronavirus Data | Daily Reports</title>
+    <!-- Cannonical Tag -->
+    <link rel="canonical" href="https://www.virusdata.dev" />
+    <!-- Social Meta Tags -->
+    <meta property="og:site_name" content="https://www.virusdata.dev" />
+    <meta property="og:title" content="Corona Stats | Coronavirus Data" />
+    <meta
+      property="og:description"
+      content="Coronavirus (COVID-19) dashboard that provides up to date information and analysis of the virus outbreak in every country."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.virusdata.dev/thumbnail.PNG"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156430453-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-156430453-3");
+    </script>
+
+    <!-- JSON-LD for SEO -->
   </head>
   <body>
     <app-root></app-root>
