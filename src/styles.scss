@@ -111,6 +111,26 @@ li {
   }
 }
 
+.btn {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  display: inline-flex;
+  font-size: 1.1rem;
+  border: 1px solid $primary;
+  background: darken($color: $primary, $amount: 5);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    background: $primary;
+  }
+}
+
 @media (max-width: $mob-width) {
   .grid {
     &.g2 {

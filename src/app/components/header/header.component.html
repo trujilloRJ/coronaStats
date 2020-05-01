@@ -1,7 +1,7 @@
 <header class="header">
   <h1 class="header__brand"><a routerLink="/home">CoronaStats</a></h1>
   <div class="header__search">
-    <app-search></app-search>
+    <app-search search="true" initCountry="Country"></app-search>
   </div>
   <ul class="header__nav">
     <li>
@@ -13,6 +13,11 @@
     <li class="header__nav__link">
       <a routerLink="/countries" routerLinkActive="link-active">countries</a>
     </li>
+    <li class="header__nav__link">
+      <a routerLink="/comparison/Italy" routerLinkActive="link-active"
+        >compare</a
+      >
+    </li>
   </ul>
   <div class="burguer" [ngClass]="mob ? 'showed' : ''" (click)="showMob()">
     <div class="line1"></div>
@@ -22,7 +27,7 @@
 </header>
 
 <div class="mob__search">
-  <app-search></app-search>
+  <app-search search="true" initCountry="Country"></app-search>
 </div>
 
 <div class="mob" [ngClass]="mob ? 'showed' : ''">
@@ -32,6 +37,11 @@
     </li>
     <li (click)="showMob()">
       <a routerLink="/countries" routerLinkActive="link-active">countries</a>
+    </li>
+    <li (click)="showMob()">
+      <a routerLink="/comparison/Italy" routerLinkActive="link-active"
+        >compare</a
+      >
     </li>
   </ul>
 </div>

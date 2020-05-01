@@ -1,15 +1,31 @@
 <div class="input__wrapper">
-  <input class="search__input" [(ngModel)]="searchText" placeholder="Country" />
+  <input
+    class="search__input"
+    [(ngModel)]="searchText"
+    [placeholder]="initCountry"
+    (click)="showList()"
+  />
   <div class="input__icon">
     <i class="fa fa-search"></i>
   </div>
 </div>
-<ul class="search__list">
-  <li
-    class="search__item"
-    *ngFor="let country of countryList | filterCountries: searchText"
-    (click)="verCountry(country)"
-  >
-    {{ country }}
-  </li>
+<ul class="search__list" [ngClass]="{ hidden: !listActive }">
+  <ng-container *ngIf="search">
+    <li
+      class="search__item"
+      *ngFor="let country of countryList | filterCountries: searchText"
+      (click)="verCountry(country)"
+    >
+      {{ country }}
+    </li>
+  </ng-container>
+  <ng-container *ngIf="!search">
+    <li
+      class="search__item"
+      *ngFor="let country of countryList | filterCountries: searchText"
+      (click)="sendCountry(country)"
+    >
+      {{ country }}
+    </li>
+  </ng-container>
 </ul>

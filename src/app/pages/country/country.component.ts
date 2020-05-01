@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AllDataService } from 'src/app/services/all-data.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class CountryComponent implements OnInit {
 
   constructor(
     private router: ActivatedRoute,
+    private routerNav: Router,
     private dataService: AllDataService
   ) {
     this.router.params.subscribe((params) => {
@@ -28,5 +29,8 @@ export class CountryComponent implements OnInit {
   setCountryToday() {
     this.countryToday = this.countryAll[this.countryAll.length - 1];
     this.countryToday['country'] = this.country;
+  }
+  compareCountry() {
+    this.routerNav.navigate(['comparison', this.country]);
   }
 }

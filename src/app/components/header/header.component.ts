@@ -30,6 +30,5 @@ export class HeaderComponent implements OnInit {
 
   showMob() {
     this.mob = !this.mob;
-    console.log('entro');
   }
 }

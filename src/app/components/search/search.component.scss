@@ -19,6 +19,7 @@
 
 .search {
   &__input {
+    width: 100%;
     padding: 0.3rem 0.5rem;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -36,6 +37,9 @@
     align-items: flex-start;
     padding: 0.3rem 0;
     box-shadow: 1px 1px 1px rgba(#333, 0.4);
+    &.hidden {
+      opacity: 0;
+    }
   }
   &__item {
     padding: 0.2rem 0.3rem 0.2rem 0.3rem;

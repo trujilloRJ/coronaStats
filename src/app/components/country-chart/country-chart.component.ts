@@ -34,6 +34,11 @@ export class CountryChartComponent implements OnInit, OnChanges {
         },
       ],
     },
+    legend: {
+      labels: {
+        fontFamily: 'rubik',
+      },
+    },
   };
   barChartType: ChartType = 'bar';
   barChartLegend = true;

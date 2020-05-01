@@ -5,5 +5,10 @@
   <div class="chart__wrapper">
     <div class="chart__title">{{ countryToday.country }} Historic Cases</div>
     <app-country-chart [countryAll]="countryAll"></app-country-chart>
+    <div class="btn__wrapper">
+      <div class="btn" (click)="compareCountry()">
+        Compare Country
+      </div>
+    </div>
   </div>
 </div>

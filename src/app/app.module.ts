@@ -17,6 +17,8 @@ import { CountryNumberComponent } from './components/country-number/country-numb
 import { CountryChartComponent } from './components/country-chart/country-chart.component';
 import { SearchComponent } from './components/search/search.component';
 import { FilterCountriesPipe } from './pipes/filter-countries.pipe';
+import { ComparisonComponent } from './pages/comparison/comparison.component';
+import { ComparisonChartComponent } from './components/comparison-chart/comparison-chart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FilterCountriesPipe } from './pipes/filter-countries.pipe';
     CountryChartComponent,
     SearchComponent,
     FilterCountriesPipe,
+    ComparisonComponent,
+    ComparisonChartComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,95 @@
+@import "../../config";
+
+.countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0rem 0 0.5rem 0;
+  .country {
+    &__search {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.comp {
+  &__heading {
+    color: $primary;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  &__fields {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $light-primary;
+    width: 100%;
+    height: 100%;
+    &__title {
+      font-size: 1.3rem;
+      color: $primary;
+      margin-bottom: 2rem;
+    }
+  }
+  &__field {
+    display: inline-flex;
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    &--cases {
+      &:hover {
+        background: rgba($cases, 0.4);
+        border-color: rgba($cases, 0.4);
+      }
+      &.active {
+        background: $cases;
+        border-color: $cases;
+        color: #fff;
+      }
+    }
+    &--deaths {
+      &:hover {
+        background: rgba($death, 0.4);
+        border-color: rgba($death, 0.4);
+      }
+      &.active {
+        background: $death;
+        border-color: $death;
+        color: #fff;
+      }
+    }
+    &--recovered {
+      &:hover {
+        background: rgba($recovered, 0.4);
+        border-color: rgba($recovered, 0.4);
+      }
+      &.active {
+        background: $recovered;
+        border-color: $recovered;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: $mob-width) {
+  .comp {
+    &__fields {
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__title {
+        margin: 0 1rem 1rem 0;
+      }
+    }
+    &__field {
+      margin-right: 0.3rem;
+    }
+  }
+}

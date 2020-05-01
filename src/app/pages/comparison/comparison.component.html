@@ -1,0 +1,89 @@
+<div class="comp__heading animated fadeIn">
+  Select Countries to Compare
+</div>
+
+<div class="countries">
+  <div class="country__search">
+    <app-search
+      [search]="false"
+      (countrySelected)="setCountryA($event)"
+      initCountry="Country A"
+    ></app-search>
+  </div>
+  <div class="country__search">
+    <app-search
+      [search]="false"
+      (countrySelected)="setCountryB($event)"
+      initCountry="Country B"
+    ></app-search>
+  </div>
+</div>
+
+<div class="total__wrapper grid g2 animated fadeIn">
+  <div class="card__wrapper">
+    <div class="comp__fields">
+      <div class="comp__fields__title">
+        Fields to Compare
+      </div>
+      <div
+        class="comp__field comp__field--cases"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'confirmed' }"
+      >
+        Total Cases
+      </div>
+      <div
+        class="comp__field comp__field--cases"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'activeCases' }"
+      >
+        Active Cases
+      </div>
+      <div
+        class="comp__field comp__field--deaths"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'deaths' }"
+      >
+        Deaths
+      </div>
+      <div
+        class="comp__field comp__field--recovered"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'recovered' }"
+      >
+        Recovered
+      </div>
+      <!-- <div
+        class="comp__field comp__field--cases"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'newCases' }"
+      >
+        New Cases
+      </div>
+      <div
+        class="comp__field comp__field--deaths"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'newDeaths' }"
+      >
+        New Deaths
+      </div>
+      <div
+        class="comp__field comp__field--recovered"
+        (click)="changeField($event)"
+        [ngClass]="{ active: field == 'newRecovered' }"
+      >
+        New Recovered
+      </div> -->
+    </div>
+  </div>
+  <div class="chart__wrapper">
+    <div class="chart__title">{{ nameA }} vs {{ nameB }}</div>
+    <app-comparison-chart
+      [countryA]="countryA"
+      [countryB]="countryB"
+      [nameCountryA]="nameA"
+      [nameCountryB]="nameB"
+      [field]="field"
+    ></app-comparison-chart>
+  </div>
+</div>
