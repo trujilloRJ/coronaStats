@@ -1,6 +1,8 @@
 <div class="input__wrapper">
   <input
     class="search__input"
+    type="text"
+    autocomplete="organization-title"
     [(ngModel)]="searchText"
     [placeholder]="initCountry"
     (click)="showList()"
